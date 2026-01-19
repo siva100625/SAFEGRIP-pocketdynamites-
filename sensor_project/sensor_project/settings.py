@@ -33,9 +33,7 @@ ALLOWED_HOSTS = []
 # settings.py
 
 # Add the URL of your React Native app to CSRF_TRUSTED_ORIGINS
-CSRF_TRUSTED_ORIGINS = [
-    'http://192.168.130.25:8081',  # Replace with your actual React Native app URL
-]
+
 
 INSTALLED_APPS = [
     'django.contrib.admin',
