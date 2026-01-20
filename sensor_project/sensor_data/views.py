@@ -49,7 +49,7 @@ class SensorDataViewSet(viewsets.ModelViewSet):
         subject = 'Threshold Alert: Sensor Value Exceeded'
         message = f'The sensor value has exceeded the threshold. Current value: {value}.'
         from_email = settings.DEFAULT_FROM_EMAIL
-        recipient_list = ['sivasubramanian.v2023ece@sece.ac.in']  # Replace with actual recipient email addresses
+        recipient_list = ['']  # Replace with actual recipient email addresses
 
         # Create an EmailMessage object
         email = EmailMessage(subject, message, from_email, recipient_list)
