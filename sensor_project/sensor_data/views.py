@@ -83,18 +83,6 @@ class SensorDataViewSet(viewsets.ModelViewSet):
 
 from django.core.mail import EmailMessage
 
-def send_threshold_exceed_email(self, value, image_path):
-    subject = 'Threshold Alert: Sensor Value Exceeded'
-    message = f'The sensor value has exceeded the threshold. Current value: {value}.'
-    from_email = settings.DEFAULT_FROM_EMAIL
-    recipient_list = ['sivasubramanian.v2023ece@sece.ac.in']
-    email = EmailMessage(subject, message, from_email, recipient_list)
-    try:
-        with open(image_path, 'rb') as image_file:
-            email.attach(image_path, image_file.read(), 'image/jpeg')
-        email.send(fail_silently=False)
-    except Exception as e:
-        print(f"Error sending email: {e}")
 
 
 
